@@ -1,7 +1,19 @@
+import java.awt.Graphics;
+import java.awt.geom.Ellipse2D;
 
-public class Circulo {
+public class Circulo extends Imagem{
+
+		
+	private int diametro;
 
 	
-	//setCentro(p : Ponto): void
-	//setRaio (r: int):void
+	public void scan() {
+		super.scan();
+		diametro = Shape.scanInt("Diametro: ");
+	}
+
+	
+	public void draw(Graphics g) {
+		g.drawOval(posicaoX, posicaoY,diametro, diametro);
+	}
 }
