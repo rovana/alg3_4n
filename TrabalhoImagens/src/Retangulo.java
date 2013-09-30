@@ -1,21 +1,16 @@
 import java.awt.Graphics;
 
-
 public class Retangulo extends Imagem {
 
-	
-	//setVertices(p0: Ponto, p1:Ponto):void
-	
-	private int altura, largura;
+	private int p1, p0;
 
 	public void scan() {
 		super.scan();
-		largura = Shape.scanInt("Largura: ");
-		altura = Shape.scanInt("Altura: ");
+		p0 = Shape.scanInt("Largura: ");
+		p1 = Shape.scanInt("Altura: ");
 	}
 
-	
 	public void draw(Graphics g) {
-		g.drawRect(posicaoX, posicaoY, largura, altura);
+		g.drawRect(posicaoX, posicaoY, p0, p1);
 	}
 }

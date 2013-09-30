@@ -1,21 +1,17 @@
 import java.awt.Graphics;
 
-
-public class Reta extends Imagem{
-
-	//setVertices(p0: Ponto, p1:Ponto):void
+public class Reta extends Imagem {
+	// largura p0 altura p1
 	
-	private int altura, largura;
+	private int p1, p0;
 
 	public void scan() {
 		super.scan();
-		largura = Shape.scanInt("Largura: ");
-		altura = Shape.scanInt("Altura: ");
+		p0 = Shape.scanInt("Largura: ");
+		p1 = Shape.scanInt("Altura: ");
 	}
 
-	
 	public void draw(Graphics g) {
-	//	g.drawRect(posicaoX, posicaoY, largura, altura);
-		g.drawLine(posicaoX, posicaoY, largura, altura);
+		g.drawLine(posicaoX, posicaoY, p0, p1);
 	}
 }
