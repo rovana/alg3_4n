@@ -1,21 +1,16 @@
-import java.awt.Color;
-import java.awt.Graphics;
 
-public class Imagem {
-
-	protected int posicaoX, posicaoY;
-	protected Color cor;
-
-	public Imagem() {
-		cor = Color.BLACK;
+public class Imagem{
+	
+	protected int x;
+	protected int y;
+	
+	public int getX() {
+		return x;
 	}
 
-	public void scan() {
-		posicaoX = Shape.scanInt("Posicao X:");
-		posicaoY = Shape.scanInt("Posicao Y:");
+	public int getY() {
+		return y;
 	}
 
-	public void draw(Graphics g) {
 
-	}
 }

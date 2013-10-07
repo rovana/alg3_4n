@@ -5,14 +5,11 @@ public class Ponto extends Imagem {
 
 	private int ponto;
 
-	public void scan() {
-		super.scan();
-		ponto = 1;
-	}
+	public static void ponto(Coordenadas coord1, Coordenadas coord2, Cor cor)	{
+		int x = coord1.getX();
+		int y = coord1.getY();
 
-	public void draw(Graphics g) {
-		g.drawOval(posicaoX, posicaoY, ponto, ponto);
 		
-	}
 
+	}	
 }
